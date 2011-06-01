@@ -8,30 +8,30 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<div data-role="page" id="rss" data-theme="b">
+	<div data-role="page" id="rss" data-theme="b">
 
-	<div data-role="header">
-		<h1>VNews</h1>
-		<a href="javascript:location.reload(true)"  id="btnAtualizar" data-icon="refresh" class="ui-btn-right">Atualizar</a>
-	</div><!-- /header -->
+		<div data-role="header" data-backbtn="false">
+			<h1>VNews</h1>
+			<a href="javascript:location.reload(true)"  id="btnAtualizar" data-icon="refresh" class="ui-btn-right">Atualizar</a>
+		</div><!-- /header -->
 
-	<div data-role="content">	
-	
-		<%= yield %>
+		<div data-role="content">
+		
+			<%= yield %>
 
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-theme="a" style="position:fixed;bottom:0px;">
-		<div data-role="navbar" >
-			<ul>
-				<li><a href="<% root_path %>" class="ui-btn-active" data-icon="star">Notícias</a></li>
-				<li><a href="<% root_path %>" data-icon="grid">Twitter</a></li>
-				<!-- @sitevnews -->
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /footer -->
+		</div> <!--/content -->
+		
+		<div data-role="footer" data-theme="a" style="position:fixed;bottom:0px;">
+			<div data-role="navbar" >
+				<ul>
+					<!-- class="ui-btn-active" -->
+					<li><a href="<%= root_path %>"  data-icon="star" data-direction="reverse">Notícias</a></li>
+					<li><a href="<%= posts_path %>" data-icon="grid">Twitter</a></li>
+					<!-- @sitevnews -->
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
 
-</div><!-- /page -->
-
+	</div><!-- /page -->
 </body>
 </html>
