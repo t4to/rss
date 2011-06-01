@@ -10,17 +10,9 @@
 <body>
 	<div data-role="page" id="rss" data-theme="b">
 	
-		<div data-role="header" data-backbtn="false" data-theme="a" style="position:fixed;top:auto;z-index:2;">
+		<div data-role="header" data-backbtn="false">
 			<h1>VNews</h1>
 			<a href="javascript:location.reload(true)"  id="btnAtualizar" data-icon="refresh" class="ui-btn-right">Atualizar</a>
-			<div data-role="navbar">
-				<ul>
-					<!-- class="ui-btn-active" -->
-					<li><a href="<%= root_path %>"  data-icon="info" data-direction="reverse">Notícias</a></li>
-					<li><a href="<%= posts_path %>" data-icon="star">Twitter</a></li>
-					<!-- @sitevnews -->
-				</ul>
-			</div><!-- /navbar -->
 		</div><!-- /header -->
 
 		<div data-role="content">
@@ -29,7 +21,16 @@
 
 		</div> <!--/content -->
 		
-
+		<div data-role="footer" data-theme="a" style="position:fixed;bottom:0px;">
+			<div data-role="navbar" >
+				<ul>
+					<!-- class="ui-btn-active" -->
+					<li><a href="<%= root_path %>"  data-icon="info" data-direction="reverse">Notícias</a></li>
+					<li><a href="<%= posts_path %>" data-icon="star">Twitter</a></li>
+					<!-- @sitevnews -->
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
 
 	</div><!-- /page -->
 </body>
