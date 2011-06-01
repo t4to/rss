@@ -1,0 +1,6 @@
+<!-- data-inset="true" data-filter="true" data-filter-placeholder="Procurar por..." -->
+<ul data-role="listview" id="news" data-theme="d" data-inset="true">
+	<% @rss.items.each do |i| %>
+	<li><%= i.title %></li>
+	<% end %>
+</ul>
