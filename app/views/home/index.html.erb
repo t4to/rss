@@ -1,4 +1,13 @@
 <!-- Notícias -->
+
+	<div data-role="page" id="noticias" data-theme="b">
+	
+		<%= render 'layouts/header' %>
+		
+		<div data-role="content">
+		
+		
+		
 <ul data-role="listview" id="news" data-theme="d" >	<!-- data-inset="true" -->
 	<% @rss.items.each do |i| %>
 	<li>
@@ -7,3 +16,47 @@
 	</li>
 	<% end %>
 </ul>
+
+
+
+
+		</div> <!--/content -->
+		
+		<%= render 'layouts/footer' %>
+		
+	</div><!-- /page -->
+	
+	
+	
+	
+	
+<!-- Twitter -->
+<div data-role="page" id="twitter" data-theme="b">
+	
+		<%= render 'layouts/header' %>
+		
+		<div data-role="content">
+		
+		
+		
+<ul data-role="listview" id="posts" data-theme="d" >
+	<% @resp.each do |r| %>
+		<li><%= r.text %></li>
+	<% end %>
+</ul>
+
+
+
+
+
+		</div> <!--/content -->
+		
+		<%= render 'layouts/footer' %>
+		
+</div><!-- /page -->
+	
+	
+	
+	
+	
+	

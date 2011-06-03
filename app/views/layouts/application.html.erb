@@ -16,31 +16,20 @@
 		$(function(){
 			// SWIPE LEFT EVENT
 			// Triggers when a swipe event occurred moving in the left direction.
-			$("#header").bind('swipeleft',function(event, ui){
-				$.mobile.changePage("<%= posts_path %>", "slide");
-				//$("#whichEvent p").replaceWith("<p>Event Triggered: Slide Left</p>");
+			$("#noticias").bind('swipeleft',function(event, ui){
+				$.mobile.changePage("#twitter", "slide", false, false);
 			})
 			
 			// SWIPE RIGHT EVENT
 			// Triggers when a swipe event occurred moving in the right direction.
-			$("#header").bind('swiperight',function(event, ui){
-				$.mobile.changePage("<%= root_path %>", "slide");
-				//$("#whichEvent p").replaceWith("<p>Event Triggered: Slide Right</p>");
+			$("#twitter").bind('swiperight',function(event, ui){
+				$.mobile.changePage("#noticias", "slide", true, false);
 			})
+
 		})
 	</script>
 </head>
 <body>
-	<div data-role="page" id="rss" data-theme="b">
-	
-		<%= render 'layouts/header' %>
-		
-		<div data-role="content">
-			<%= yield %>
-		</div> <!--/content -->
-		
-		<%= render 'layouts/footer' %>
-		
-	</div><!-- /page -->
+	<%= yield %>
 </body>
 </html>
