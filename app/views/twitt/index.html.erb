@@ -6,8 +6,9 @@
 		<div style="margin-left:15px;"><%= @user.description %><br/></div>
 	</li>
 </ul>
+<br/>
 	
-<ul data-role="listview" id="posts" data-theme="d" data-inset="true">
+<ul data-role="listview" id="posts" data-theme="d" >
 	<% @resp.each do |r| %>
 		<li><%= r.text %></li>
 	<% end %>
