@@ -12,7 +12,9 @@
 	<% @rss.items.each do |i| %>
 	<li>
 		<div class="titdata"><%= i.description %></div>
-		<%= link_to i.title, i.link, :target=>"_blank", :style => "white-space:normal;" %>
+		<div class="titnoticia" ><%= i.title %></div>
+		<%= link_to "", i.link, :target=>"_blank", :style=>"display:none;" %>
+		<%= link_to "Leia +", i.link, :target=>"_blank", :"data-icon"=>"add" %>
 	</li>
 	<% end %>
 </ul>
@@ -41,7 +43,10 @@
 		
 <ul data-role="listview" id="posts" data-theme="d" >
 	<% @resp.each do |r| %>
-		<li><%= r.text %></li>
+		<li data-icon=false>
+			<div class="titpost"><%= r.text %></div>
+			<%= link_to "", "", :style=>"display:none;" %>
+		</li>
 	<% end %>
 </ul>
 
