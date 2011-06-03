@@ -6,6 +6,29 @@
   <%= stylesheet_link_tag "http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css" %>
   <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+
+		
+		});
+		
+		$(function(){
+			// SWIPE LEFT EVENT
+			// Triggers when a swipe event occurred moving in the left direction.
+			$("#header").bind('swipeleft',function(event, ui){
+				$.mobile.changePage("<%= posts_path %>", "slide");
+				//$("#whichEvent p").replaceWith("<p>Event Triggered: Slide Left</p>");
+			})
+			
+			// SWIPE RIGHT EVENT
+			// Triggers when a swipe event occurred moving in the right direction.
+			$("#header").bind('swiperight',function(event, ui){
+				$.mobile.changePage("<%= root_path %>", "slide");
+				//$("#whichEvent p").replaceWith("<p>Event Triggered: Slide Right</p>");
+			})
+		})
+	</script>
 </head>
 <body>
 	<div data-role="page" id="rss" data-theme="b">

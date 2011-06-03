@@ -1,13 +1,4 @@
-
-<ul data-role="listview" id="posts" data-theme="d" data-inset="true">
-	<li>
-		<%= image_tag @user.profile_image_url, :class => "ui-li-icon"%>
-		<div style="margin-left:15px;">@<%= @user.screen_name %></div>
-		<div style="margin-left:15px;"><%= @user.description %><br/></div>
-	</li>
-</ul>
-<br/>
-	
+<!-- Twitter -->
 <ul data-role="listview" id="posts" data-theme="d" >
 	<% @resp.each do |r| %>
 		<li><%= r.text %></li>
