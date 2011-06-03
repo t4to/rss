@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VNews - O Seu Jornal Eletrônico</title>
+  <title>VNews</title>
   <%= stylesheet_link_tag :all %>
   <%= stylesheet_link_tag "http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css" %>
   <%= javascript_include_tag :all %>
@@ -10,10 +10,7 @@
 <body>
 	<div data-role="page" id="rss" data-theme="b">
 	
-		<div data-role="header" data-backbtn="false">
-			<h1>VNews</h1>
-			<a href="javascript:location.reload(true)"  id="btnAtualizar" data-icon="refresh" class="ui-btn-right">Atualizar</a>
-		</div><!-- /header -->
+		<%= render 'layouts/header' %>
 
 		<div data-role="content">
 		
@@ -21,15 +18,7 @@
 
 		</div> <!--/content -->
 		
-		<div data-role="footer" data-theme="a" data-id="rodape" data-position="fixed" class="ui-btn-active ui-state-persist">
-			<div data-role="navbar" >
-				<ul>
-					<!-- class="ui-btn-active" -->
-					<li><a href="<%= root_path %>"  data-icon="info" data-direction="reverse">Notícias</a></li>
-					<li><a href="<%= posts_path %>" data-icon="star">Twitter</a></li>
-				</ul>
-			</div><!-- /navbar -->
-		</div><!-- /footer -->
+		<%= render 'layouts/footer' %>
 
 	</div><!-- /page -->
 </body>
