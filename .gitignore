@@ -8,3 +8,7 @@ doc/
 *~
 .project
 .DS_Store
+*.psd
+*.pdf
+test
+spec
