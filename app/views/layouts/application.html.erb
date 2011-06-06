@@ -17,13 +17,13 @@
 			// SWIPE LEFT EVENT
 			// Triggers when a swipe event occurred moving in the left direction.
 			$("#noticias").bind('swipeleft',function(event, ui){
-				$.mobile.changePage("#twitter", "slide", false, false);
+				$.mobile.changePage("#twitter", "slide", false, true);
 			})
 			
 			// SWIPE RIGHT EVENT
 			// Triggers when a swipe event occurred moving in the right direction.
 			$("#twitter").bind('swiperight',function(event, ui){
-				$.mobile.changePage("#noticias", "slide", true, false);
+				$.mobile.changePage("#noticias", "slide", true, true);
 			})
 
 		})
