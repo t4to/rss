@@ -2,7 +2,15 @@
 
 	<div data-role="page" id="noticias" data-theme="b">
 	
-		<%= render 'layouts/header' %>
+		<!-- <%= render 'layouts/header' %> -->
+
+		
+<div data-role="header" id="header" data-backbtn="false">
+	<h1>VNews | Notícias</h1>
+	<a href="javascript:location.reload(true)"  id="btnAtualizar" data-icon="refresh" class="ui-btn-right">Atualizar</a>
+</div><!-- /header -->
+<%= render 'layouts/header' %>
+		
 		
 		<div data-role="content">
 		
@@ -35,7 +43,17 @@
 <!-- Twitter -->
 <div data-role="page" id="twitter" data-theme="b">
 	
-		<%= render 'layouts/header' %>
+		<!-- <%= render 'layouts/header' %> -->
+		
+		
+<div data-role="header" id="header" data-backbtn="false">
+	<h1>VNews | Twitter</h1>
+	<a href="javascript:location.reload(true)"  id="btnAtualizar" data-icon="refresh" class="ui-btn-right">Atualizar</a>
+</div><!-- /header -->
+<%= render 'layouts/header' %>
+		
+		
+		
 		
 		<div data-role="content">
 		
