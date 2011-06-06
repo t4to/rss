@@ -25,3 +25,9 @@
 	
 	white-space:normal;
 }
+
+.dica {
+	font:normal 14px Helvetica;
+	text-align:center;
+	width:100%;
+}
